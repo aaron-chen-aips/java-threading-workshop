@@ -1,0 +1,38 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'io.quarkus' version '3.6.2'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation enforcedPlatform('io.quarkus.platform:quarkus-bom:3.6.2')
+
+    implementation 'io.quarkus:quarkus-resteasy-reactive'
+    implementation 'io.quarkus:quarkus-resteasy-reactive-jackson'
+    implementation 'io.quarkus:quarkus-vertx'
+    implementation 'io.quarkus:quarkus-virtual-threads'
+
+    compileOnly 'org.projectlombok:lombok:1.18.32'
+    annotationProcessor 'org.projectlombok:lombok:1.18.32'
+    implementation 'ch.qos.logback:logback-classic:1.4.11'
+
+    testImplementation 'io.quarkus:quarkus-junit5'
+    testImplementation 'io.rest-assured:rest-assured'
+}
+
+application {
+    mainClass = 'asyncdemo.Main'
+}

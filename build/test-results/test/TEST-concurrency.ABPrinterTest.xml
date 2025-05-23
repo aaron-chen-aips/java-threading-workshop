@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="concurrency.ABPrinterTest" tests="3" skipped="0" failures="3" errors="0" timestamp="2025-05-22T13:36:17" hostname="M1558" time="0.021">
+  <properties/>
+  <testcase name="test10Pairs()" classname="concurrency.ABPrinterTest" time="0.014">
+    <failure message="org.opentest4j.AssertionFailedError: expected: &lt;ABABABABABABABABABAB&gt; but was: &lt;BBAAABBABABAAAABBBABABBAAAABBAABB&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: expected: &lt;ABABABABABABABABABAB&gt; but was: &lt;BBAAABBABABAAAABBBABABBAAAABBAABB&gt;
+	at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at app//org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at app//org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at app//org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+	at app//concurrency.ABPrinterTest.testNPairs(ABPrinterTest.java:84)
+	at app//concurrency.ABPrinterTest.testNPairs(ABPrinterTest.java:39)
+	at app//concurrency.ABPrinterTest.test10Pairs(ABPrinterTest.java:27)
+	at java.base@21.0.3/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base@21.0.3/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base@21.0.3/java.util.ArrayList.forEach(ArrayList.java:1596)
+</failure>
+  </testcase>
+  <testcase name="test3Pairs()" classname="concurrency.ABPrinterTest" time="0.003">
+    <failure message="org.opentest4j.AssertionFailedError: expected: &lt;ABABAB&gt; but was: &lt;ABBAAABABABABBBAAAABBBAABBABBBAAA&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: expected: &lt;ABABAB&gt; but was: &lt;ABBAAABABABABBBAAAABBBAABBABBBAAA&gt;
+	at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at app//org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at app//org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at app//org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+	at app//concurrency.ABPrinterTest.testNPairs(ABPrinterTest.java:84)
+	at app//concurrency.ABPrinterTest.testNPairs(ABPrinterTest.java:39)
+	at app//concurrency.ABPrinterTest.test3Pairs(ABPrinterTest.java:20)
+	at java.base@21.0.3/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base@21.0.3/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base@21.0.3/java.util.ArrayList.forEach(ArrayList.java:1596)
+</failure>
+  </testcase>
+  <testcase name="test87Pairs()" classname="concurrency.ABPrinterTest" time="0.002">
+    <failure message="org.opentest4j.AssertionFailedError: expected: &lt;ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABAB&gt; but was: &lt;ABBAABBBABABBAAAABBABABAABBABBAAA&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: expected: &lt;ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABAB&gt; but was: &lt;ABBAABBBABABBAAAABBABABAABBABBAAA&gt;
+	at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at app//org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at app//org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at app//org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+	at app//concurrency.ABPrinterTest.testNPairs(ABPrinterTest.java:84)
+	at app//concurrency.ABPrinterTest.testNPairs(ABPrinterTest.java:39)
+	at app//concurrency.ABPrinterTest.test87Pairs(ABPrinterTest.java:34)
+	at java.base@21.0.3/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base@21.0.3/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base@21.0.3/java.util.ArrayList.forEach(ArrayList.java:1596)
+</failure>
+  </testcase>
+  <system-out><![CDATA[Actual: BBAAABBABABAAAABBBABABBAAAABBAABB
+Expected: ABABABABABABABABABAB
+Actual: ABBAAABABABABBBAAAABBBAABBABBBAAA
+Expected: ABABAB
+Actual: ABBAABBBABABBAAAABBABABAABBABBAAA
+Expected: ABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABABAB
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
