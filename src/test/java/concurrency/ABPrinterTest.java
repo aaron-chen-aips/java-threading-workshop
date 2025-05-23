@@ -39,7 +39,7 @@ class ABPrinterTest {
         testNPairs(N, false);
     }
     private void testNPairs(int N, boolean printLog ) throws InterruptedException {
-        final var printer = new ABPrinter(N);
+        final var printer = new ABPrinterSolution(N);
 
         final CountDownLatch countDownLatch = new CountDownLatch(THREAD_COUNT);
         final ExecutorService executorService = Executors.newCachedThreadPool();

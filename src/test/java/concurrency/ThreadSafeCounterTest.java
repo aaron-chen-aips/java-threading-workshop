@@ -13,7 +13,7 @@ class ThreadSafeCounterTest {
 
     @Test
     void testThreadSafeCounter() throws InterruptedException {
-        final var counter = new VolatileCounter();
+        final var counter = new AtomicCounter();
 
         final CountDownLatch countDownLatch = new CountDownLatch(THREAD_COUNT);
         final ExecutorService executorService = Executors.newCachedThreadPool();

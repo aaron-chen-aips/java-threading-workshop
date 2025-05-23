@@ -30,8 +30,14 @@ class AtomicCounter {
 class SynchronizedCounter {
     private int counter = 0;
 
-    public synchronized void add() {
-        counter++;
+//    public synchronized void add() {
+//        counter++;
+//    }
+
+    public void add() {
+        synchronized (this) {
+            counter++;
+        }
     }
 
     public synchronized int get() {
